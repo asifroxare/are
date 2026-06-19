@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ace the ARe™ 2026 | Free Ebook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      max-width: 680px;
+      width: 100%;
+      padding: 50px 40px;
+      text-align: center;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ── Badge ── */
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff90e8, #c084fc);
+      color: #1a1a2e;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 18px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* ── Icon Badge ── */
+    .icon-badge {
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(135deg, #ff90e8, #c084fc);
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      margin: 0 auto 32px auto;
+      box-shadow: 0 12px 32px rgba(255, 144, 232, 0.4);
+    }
+
+    /* ── Headline ── */
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.35;
+      margin-bottom: 16px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, #ff90e8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ── Subtitle ── */
+    .subtitle {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── Features ── */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    .feature-pill {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── Story Section ── */
+    .story-box {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 144, 232, 0.25);
+      border-radius: 16px;
+      padding: 28px 28px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
+
+    .story-box .story-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #ff90e8;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .story-box p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .story-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-box p strong {
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .highlight-text {
+      background: linear-gradient(90deg, #ff90e8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    /* ── Pay What You Want Box ── */
+    .pay-box {
+      background: rgba(255, 144, 232, 0.08);
+      border: 1px dashed rgba(255, 144, 232, 0.4);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-align: left;
+    }
+
+    .pay-box .pay-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .pay-box .pay-text {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.65;
+    }
+
+    .pay-box .pay-text strong {
+      color: #ff90e8;
+      font-size: 15px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* ── CTA Button ── */
+    .btn-wrapper {
+      margin-bottom: 20px;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #ff90e8, #c084fc);
+      color: #1a1a2e;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 8px 24px rgba(255, 144, 232, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    a.button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(255, 144, 232, 0.5);
+    }
+
+    /* ── Footer Note ── */
+    .footer-note {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.35);
+      margin-top: 8px;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin: 32px 0;
+    }
+
+    /* ── Author ── */
+    .author {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .author strong {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .card { padding: 36px 24px; }
+      h1 { font-size: 22px; }
+      .subtitle { font-size: 15px; }
+      .icon-badge { width: 72px; height: 72px; font-size: 34px; }
+      .pay-box { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- Badge -->
+    <div class="badge">🆓 Free Ebook · 2026 Edition</div>
+
+    <!-- Icon -->
+    <div class="icon-badge">📘</div>
+
+    <!-- Headline -->
+    <h1>Ace the <span>ARe™</span> Designation<br>The Ultimate Study Guide</h1>
+
+    <!-- Subtitle -->
+    <p class="subtitle">
+      Thinking about pursuing the
+      <strong style="color:rgba(255,255,255,0.85)">Associate in Reinsurance (ARe™)</strong>
+      designation? This practical guide helps insurance & reinsurance professionals
+      understand the value, plan studies effectively, and prepare with confidence.
+    </p>
+
+    <!-- Feature Pills -->
+    <div class="features">
+      <div class="feature-pill">📘 Exam Breakdown</div>
+      <div class="feature-pill">🗓️ Study Planner</div>
+      <div class="feature-pill">💡 200+ Questions</div>
+      <div class="feature-pill">✅ Pro Tips</div>
+      <div class="feature-pill">🆓 100% Free</div>
+    </div>
+
+    <!-- Story Section -->
+    <div class="story-box">
+      <div class="story-title">❤️ A Note from the Author</div>
+      <p>
+        I spent <strong>three weeks</strong> researching, writing, and refining this ebook —
+        pouring in everything I know about the
+        <span class="highlight-text">ARe™ designation journey</span>
+        to make it as useful and practical as possible.
+      </p>
+      <p>
+        I'm sharing it completely <strong>free</strong> because I believe
+        knowledge should be accessible to everyone in the reinsurance community.
+        No paywalls. No strings attached.
+      </p>
+      <p>
+        If this resource helped you or you'd like to <strong>support my work</strong>,
+        you're welcome to pay whatever you feel it's worth — even
+        <strong style="color:#ff90e8;">USD $0</strong> gets you the full copy instantly. 🙏
+      </p>
+    </div>
+
+    <!-- Pay What You Want Box -->
+    <div class="pay-box">
+      <div class="pay-icon">💸</div>
+      <div class="pay-text">
+        <strong>Pay what you want — including nothing!</strong>
+        Enter <strong>USD $0</strong> at checkout to get it completely free,
+        or contribute any amount to support future free resources like this one.
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="btn-wrapper">
+      <a class="button" href="https://asifrox.gumroad.com/l/ace-the-are-2026" target="_blank">
+        🚀 Get Your Free Copy on Gumroad
+      </a>
+    </div>
+
+    <!-- Footer Note -->
+    <p class="footer-note">No sign-up required · Instant download · PDF format</p>
+
+    <hr class="divider">
+
+    <!-- Author -->
+    <p class="author">Created by <strong>Aasif Ansari</strong> · Reinsurance Professional</p>
+
+  </div>
+
+</body>
+</html>
